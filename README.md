@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Wedoogift React Challenge
 
 In this challenge, we need you to create a simple React (web)
@@ -15,3 +16,7 @@ in their respective `README.md` file in the `src/levelX` folder.
 
 **You may display the three levels on the same root page of the
 React application (App.js).**
+=======
+# challenge-react-wedoo-gift
+Little projet as an exercice for the recruiting process of Wedoogift
+>>>>>>> Initial commit
