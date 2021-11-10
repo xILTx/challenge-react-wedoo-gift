@@ -1,0 +1,25 @@
+.card-container {
+  display: inline-block;
+  position: relative;
+  margin: 0 35px;
+}
+
+.card {
+  display: inline-block;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  filter: drop-shadow(0 0 0.4rem black);
+}
+.card-amount {
+  display: inline-block;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+  word-spacing: -10px;
+}
