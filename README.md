@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Wedoogift React Challenge
 
 In this challenge, we need you to create a simple React (web)
@@ -18,5 +19,8 @@ in their respective `README.md` file in the `src/levelX` folder.
 React application (App.js).**
 =======
 # challenge-react-wedoo-gift
+=======
+# challenge-react-wedoogift
+>>>>>>> Update README.md
 Little projet as an exercice for the recruiting process of Wedoogift
 >>>>>>> Initial commit
