@@ -75,8 +75,10 @@ export const CardFinder = () => {
     if (isFirstTime) {
       setIsFirstTime(false);
     }
+    console.log("desiredAmount :", desiredAmount);
     const res = await fetchCombinaisonOfCards(desiredAmount);
     if (res[0] === null) {
+      console.log(res[1]);
       setCombinaisonOfCards(res[1]);
     } else {
       setInputError(true);
