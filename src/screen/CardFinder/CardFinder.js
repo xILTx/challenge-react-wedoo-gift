@@ -40,24 +40,20 @@ export const CardFinder = () => {
   useChain([springRef, transitionRef], [0, 0.15]);
 
   useEffect(() => {
-    if (Object.prototype.hasOwnProperty.call(combinaisonOfCards, "equal")) {
+    if (combinaisonOfCards.equal !== undefined) {
       setTogglePlusMinusCards(false);
       setCardsToDisplay(combinaisonOfCards.equal.cards);
     } else if (
-      Object.prototype.hasOwnProperty.call(combinaisonOfCards, "floor") &&
-      Object.prototype.hasOwnProperty.call(combinaisonOfCards, "ceil")
+      combinaisonOfCards.floor !== undefined &&
+      combinaisonOfCards.ceil !== undefined
     ) {
       setCardsToDisplay([]);
       setTogglePlusMinusCards(true);
-    } else if (
-      Object.prototype.hasOwnProperty.call(combinaisonOfCards, "floor")
-    ) {
+    } else if (combinaisonOfCards.floor !== undefined) {
       setDesiredAmount(combinaisonOfCards.floor.value);
       setCardsToDisplay(combinaisonOfCards.floor.cards);
       setTogglePlusMinusCards(false);
-    } else if (
-      Object.prototype.hasOwnProperty.call(combinaisonOfCards, "ceil")
-    ) {
+    } else if (combinaisonOfCards.ceil !== undefined) {
       setDesiredAmount(combinaisonOfCards.ceil.value);
       setCardsToDisplay(combinaisonOfCards.ceil.cards);
       setTogglePlusMinusCards(false);
@@ -82,10 +78,8 @@ export const CardFinder = () => {
     const res = await fetchCombinaisonOfCards(desiredAmount);
     if (res[0] === null) {
       setCombinaisonOfCards(res[1]);
-      console.log(res);
     } else {
       setInputError(true);
-      console.log("EROOOOOOORRRRROORRRR");
     }
   };
 
