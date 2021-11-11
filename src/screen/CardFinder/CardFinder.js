@@ -82,10 +82,8 @@ export const CardFinder = () => {
     const res = await fetchCombinaisonOfCards(desiredAmount);
     if (res[0] === null) {
       setCombinaisonOfCards(res[1]);
-      console.log(res);
     } else {
       setInputError(true);
-      console.log("EROOOOOOORRRRROORRRR");
     }
   };
 
