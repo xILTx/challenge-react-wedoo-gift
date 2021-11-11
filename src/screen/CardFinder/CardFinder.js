@@ -11,7 +11,7 @@ import "./CardFinder.css";
 import { About } from "../About/About";
 
 export const CardFinder = () => {
-  const [desiredAmount, setDesiredAmount] = useState(0);
+  const [desiredAmount, setDesiredAmount] = useState("");
   const [togglePlusMinusCards, setTogglePlusMinusCards] = useState(false);
   const [combinaisonOfCards, setCombinaisonOfCards] = useState({});
   const [cardsToDisplay, setCardsToDisplay] = useState([]);
@@ -80,6 +80,7 @@ export const CardFinder = () => {
     if (res[0] === null) {
       console.log(res[1]);
       setCombinaisonOfCards(res[1]);
+      setDesiredAmount(desiredAmount);
     } else {
       setInputError(true);
     }
@@ -133,6 +134,8 @@ export const CardFinder = () => {
               onKeyPress={handlePressEnter}
               min="0"
               max="999"
+              onWheel={(e) => e.target.blur()}
+              placeholder={"0"}
             />
             <span className={"input-currency"}>€</span>
           </div>
