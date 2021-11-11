@@ -40,20 +40,24 @@ export const CardFinder = () => {
   useChain([springRef, transitionRef], [0, 0.15]);
 
   useEffect(() => {
-    if (combinaisonOfCards.hasOwnProperty("equal")) {
+    if (Object.prototype.hasOwnProperty.call(combinaisonOfCards, "equal")) {
       setTogglePlusMinusCards(false);
       setCardsToDisplay(combinaisonOfCards.equal.cards);
     } else if (
-      combinaisonOfCards.hasOwnProperty("floor") &&
-      combinaisonOfCards.hasOwnProperty("ceil")
+      Object.prototype.hasOwnProperty.call(combinaisonOfCards, "floor") &&
+      Object.prototype.hasOwnProperty.call(combinaisonOfCards, "ceil")
     ) {
       setCardsToDisplay([]);
       setTogglePlusMinusCards(true);
-    } else if (combinaisonOfCards.hasOwnProperty("floor")) {
+    } else if (
+      Object.prototype.hasOwnProperty.call(combinaisonOfCards, "floor")
+    ) {
       setDesiredAmount(combinaisonOfCards.floor.value);
       setCardsToDisplay(combinaisonOfCards.floor.cards);
       setTogglePlusMinusCards(false);
-    } else if (combinaisonOfCards.hasOwnProperty("ceil")) {
+    } else if (
+      Object.prototype.hasOwnProperty.call(combinaisonOfCards, "ceil")
+    ) {
       setDesiredAmount(combinaisonOfCards.ceil.value);
       setCardsToDisplay(combinaisonOfCards.ceil.cards);
       setTogglePlusMinusCards(false);

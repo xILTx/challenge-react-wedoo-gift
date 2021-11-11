@@ -17,7 +17,6 @@ export async function fetchCombinaisonOfCards(desiredAmount) {
     });
     return [null, message.data];
   } catch (err) {
-    console.log(err);
     return [err];
   }
 }

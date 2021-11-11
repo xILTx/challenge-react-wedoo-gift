@@ -10,7 +10,7 @@ export const ListofCards = ({ ...props }) => {
 
   return (
     <div className={"listOfCards-container"}>
-      {trail.map(({ height, ...style }, index) => (
+      {trail.map(({ ...style }, index) => (
         <animated.div style={style} key={index}>
           <Card>{props.cards[index]} €</Card>
         </animated.div>

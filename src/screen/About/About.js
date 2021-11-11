@@ -23,19 +23,20 @@ export const About = ({ ...props }) => {
         <div onClick={props.onClick}>
           <SVGArrow className={"arrow"} width={"20px"} />
         </div>
-        <h1 className={"h1 margin-neg"}>A quoi sert cet outil ?</h1>
+        <h1 className={"h1 margin-neg"}>À quoi sert cet outil ?</h1>
         <p className={"p"}>
           cet outil permet de vérifier si le montant de la carte cadeau que vous
           désirez est disponible dans nos stocks.
         </p>
-        <h1 className={"h1"}>Comment fonctionne t'il ?</h1>
+        <h1 className={"h1"}>Comment fonctionne t&apos;il ?</h1>
         <p className={"p"}>
-          - Si le montant cadeau désiré est disponible, l'outil affichera alors
-          la/les cartes permettant d'obtenir ce montant. <br />
-          - Si le montant cadeau désiré n'est pas disponible, mais que d'autres
-          montants alternatifs existent, l'outil vous les proposera
+          - Si le montant cadeau désiré est disponible, l&apos;outil affichera
+          alors la/les cartes permettant d&apos;obtenir ce montant. <br />
+          - Si le montant cadeau désiré n&apos;est pas disponible, mais que
+          d&apos;autres montants alternatifs existent, l&apos;outil vous les
+          proposera
           <br />- Enfin si le montant est plus haut ou plus bas que les montants
-          disponibles, l'outil corrige automatiquement à la valeur la plus
+          disponibles, l&apos;outil corrige automatiquement à la valeur la plus
           proche
         </p>
         <br />
